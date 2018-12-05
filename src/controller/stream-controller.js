@@ -1366,8 +1366,6 @@ class StreamController extends TaskLoop {
 
     if (!this.loadedmetadata && buffered.length) {
       this.loadedmetadata = true;
-      // Need to check what the SourceBuffer reports as start time for the first fragment appended.
-      this.startPosition = buffered.start(0);
       this._seekToStartPos();
     } else if (this.immediateSwitch) {
       this.immediateLevelSwitchEnd();
